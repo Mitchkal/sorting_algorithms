@@ -40,7 +40,7 @@ size_t partition(int *array, int lo, int hi, int size)
 			}
 		}
 	}
-	if (i != hi)
+	if ((i + 1) != hi)
 	{
 		swap(&array[i + 1], &array[hi]);
 		print_array(array, size);
@@ -56,8 +56,9 @@ size_t partition(int *array, int lo, int hi, int size)
 void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
+	{
 		return;
-
+	}
 	sort(array, 0, size - 1, size);
 }
 /**
