@@ -55,7 +55,7 @@ size_t partition(int *array, int lo, int hi, int size)
  */
 void quick_sort(int *array, size_t size)
 {
-	if (size < 2 || array == NULL)
+	if (array == NULL || size < 2)
 		return;
 
 	sort(array, 0, size - 1, size);
